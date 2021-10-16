@@ -1,0 +1,30 @@
+Clientes
+	Nome
+	Morada
+	UserName
+	Password
+
+Produto
+	Nome
+	TipoProduto
+	Preco
+	Descricao
+
+CarrinhoCompras
+	ListagemProdutos
+	PromocoesAplicadas
+	Quantidade
+
+Pagamento
+	Cliente
+	DadosCartao
+	CarrinhoCompras
+
+DadosEntrega
+	NomeDestinatario
+	Morada
+	ListagemProdutos
+
+	
+	
+	

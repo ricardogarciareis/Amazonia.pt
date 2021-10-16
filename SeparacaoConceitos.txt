@@ -1,0 +1,10 @@
+FrontEnd - html, aplicação console, smartphone
+BackEnd - .NET C#, DLLs
+Database - SQL Server, OracleDB
+
+
+
+Amazonia.WebAPI
+Amazonia.WebAPP
+Amazonia.BLL (BusinessLogicLayer)
+Amazonia.DAL (DataAccessLayer)
