@@ -16,5 +16,9 @@ namespace Amazonia.DAL
 
         //public string Idioma { get; set; } //Só em português, espanhol, inglês
         public Idioma Idioma { get; set; }
+
+        public virtual decimal ObterPreco(){
+            return Preco;
+        }
     }
 }

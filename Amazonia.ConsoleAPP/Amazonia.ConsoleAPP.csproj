@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <!--Adicionado através da linha de comando dotnet add reference ..\Amazonia.DAL-->
+    <ProjectReference Include="..\Amazonia.DAL\Amazonia.DAL.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

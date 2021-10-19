@@ -13,5 +13,11 @@ namespace Amazonia.DAL
         public string UserName { get; set; }
         public string Password { get; set; }
         public DateTime DataNascimento { get; set; }
+        public int Idade => DateTime.Now.Year - DataNascimento.Year;
+
+        public override string ToString()
+        {
+            return $"Nome: {Nome} => Idade: {Idade}";
+        }
     }
 }
