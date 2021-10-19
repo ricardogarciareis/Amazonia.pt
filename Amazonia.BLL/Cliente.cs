@@ -13,7 +13,6 @@ namespace Amazonia.BLL
         public Morada Morada { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
-        
-        public string NumeroContribuinte { get; set; }
+        public DateTime DataNascimento { get; set; }
     }
 }
