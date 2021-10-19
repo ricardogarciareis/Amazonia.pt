@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amazonia.BLL
+namespace Amazonia.DAL
 {
-    class LivroImpresso : Livro
+    public class LivroImpresso : Livro
     {
         public int QuantidadePaginas { get; set; }
         public Dimensoes Dimensoes { get; set; }

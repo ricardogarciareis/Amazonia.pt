@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amazonia.BLL
+namespace Amazonia.DAL
 {
-    class LivroDigital : Livro
+    public class LivroDigital : Livro
     {
         public int TamanhoEmMB { get; set; }
         public string FormatoFicheiro { get; set; } //pdf, doc, epub....

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amazonia.BLL
+namespace Amazonia.DAL
 {
-    class AudioLivro : Livro
+    public class AudioLivro : Livro
     {
         public string FormatoFicheiro { get; set; }
         public int DuracaoLivro { get; set; }

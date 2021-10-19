@@ -1,5 +1,5 @@
 
-namespace Amazonia.BLL
+namespace Amazonia.DAL
 {
     public enum Idioma{
     //Lista de tipos
