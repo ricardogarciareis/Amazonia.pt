@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amazonia.DAL
+namespace Amazonia.DAL.Entidades
 {
     public abstract class Livro
     {
