@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Amazonia.DAL.Entidades
 {
-    public abstract class Livro
+    public abstract class Livro : Entidade
+    //public class Livro : Entidade
     {
-        public string Nome { get; set; }
+        //public string Nome { get; set; }
         //public string TipoPublicacao { get; set; }
         public decimal Preco { get; set; }
         public string Descricao { get; set; }
@@ -19,6 +20,11 @@ namespace Amazonia.DAL.Entidades
 
         public virtual decimal ObterPreco(){
             return Preco;
+        }
+
+        public override string ToString()
+        {
+            return $"Nome: {Nome} => Identificador: {Identificador}";
         }
     }
 }
