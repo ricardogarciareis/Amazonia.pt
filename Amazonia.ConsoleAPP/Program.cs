@@ -8,11 +8,32 @@ namespace Amazonia.ConsoleAPP
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Consulta do Database");
+            ListarClientes();
+            ListarLivros();
+
+        }
+
+        public static void ListarLivros()
+        {
+            Console.WriteLine("+------------------------------------------------------------------+");
+            Console.WriteLine("|              CONSULTA DA BASE DE DADOS DOS LIVROS                |");
+            Console.WriteLine("+------------------------------------------------------------------+");
+            var repo = new RepositorioLivro();
+
+            var listaLivros = repo.ObterTodos();
+
+            foreach (var item in listaLivros){
+                Console.WriteLine(item);
+            }
+        }
+
+        public static void ListarClientes()
+        {
+            Console.WriteLine("+------------------------------------------------------------------+");
+            Console.WriteLine("|             CONSULTA DA BASE DE DADOS DOS CLIENTES               |");
+            Console.WriteLine("+------------------------------------------------------------------+");
 
             var repo = new RepositorioCliente();
-
-            
 
             var listaClientes = repo.ObterTodos();
             //var listaClientes = repo.ObterTodosQueComecemPor("J");
@@ -23,6 +44,7 @@ namespace Amazonia.ConsoleAPP
                 Console.WriteLine(item);
             }
 
+            /*
             var joao = repo.ObterPorNome("Joao");
             Console.WriteLine($"Database contém {listaClientes.Count} clientes");
 
@@ -40,6 +62,7 @@ namespace Amazonia.ConsoleAPP
             foreach (var item in listaClientes){
                 Console.WriteLine(item);
             }
+            */
 
             // Console.WriteLine("Criação de novos clientes na DataBase");
             // do{
@@ -55,8 +78,6 @@ namespace Amazonia.ConsoleAPP
             // {
             //     Console.WriteLine(item);
             // }
-
-
         }
     }
 }
