@@ -10,11 +10,38 @@ namespace Amazonia.DAL.Repositorios
 {
     public class RepositorioLivro : IRepositorio<Livro>
     {
-        private List<Livro> ListaLivros;
+        private readonly List<Livro> ListaLivros;
         public RepositorioLivro()
         {
             ListaLivros = new List<Livro>();
-            
+
+            var lotrImp = new LivroImpresso
+            {
+                Nome = "Harry Potter",
+                Autor = "JK",
+                QuantidadePaginas = 264
+            }; 
+            ListaLivros.Add(lotrImp);
+
+            var lotrAud = new AudioLivro
+            {
+                Nome = "O Senhor dos Anéis",
+                Autor = "J.R.R. Tolkien",
+                DuracaoLivro = 6,
+                FormatoFicheiro = "MP3"
+            }; 
+            ListaLivros.Add(lotrAud);
+
+            var lotrEBook = new LivroDigital
+            {
+                Nome = "O Senhor dos Anéis",
+                Autor = "J.R.R. Tolkien",
+                InformacoesLicenca = "Gratuíta",
+                TamanhoEmMB = 5,
+                FormatoFicheiro = "pdf"
+            };
+            ListaLivros.Add(lotrEBook);
+                
         }
         public void Criar(Livro obj)
         {

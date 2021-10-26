@@ -24,7 +24,10 @@ namespace Amazonia.DAL.Entidades
 
         public override string ToString()
         {
-            return $"Nome: {Nome} => Identificador: {Identificador}";
+            var sb = new StringBuilder();
+            sb.AppendLine(Nome);
+            sb.Append("| Identificador: " + Identificador);
+            return sb.ToString();
         }
     }
 }

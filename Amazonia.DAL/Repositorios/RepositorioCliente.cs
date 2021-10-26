@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Amazonia.DAL;
 using Amazonia.DAL.Entidades;
+using Amazonia.DAL.Infraestrutura;
 
 namespace Amazonia.DAL.Repositorios
 {
@@ -97,5 +98,10 @@ namespace Amazonia.DAL.Repositorios
             ListaClientes.Remove(obj);
         }
 
+        public void GerarRelatorio(IImpressora impressora)  //TODO: COmpletar a implementação do método Imprimir
+        {
+            //IImpressora impressora = new ImpressoraPapel();
+            impressora.Imprimir();
+        }
     }
 }
