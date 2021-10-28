@@ -42,5 +42,25 @@ namespace Amazonia.DAL.Tests
             Assert.IsTrue(quantidadeLIvrosNoRepositorio >= minElementos);
         }
 
+        [TestMethod]
+        public void DeveCriarUmaListaDeLivrosNoRepositorioLivrosComFalha()
+        {
+            //Arrange
+            RepositorioLivro repositorio;
+            List<Livro> livros;
+            var quantidadeElementos = 4;
+
+            //Act
+            repositorio = new RepositorioLivro();
+            livros = repositorio.ObterTodos();
+            var quantidadeLIvrosNoRepositorio = livros.Count;
+
+            //Assert
+            Assert.IsNotNull(repositorio);
+            Assert.IsNotNull(livros);
+            //Assert.IsTrue(quantidadeLIvrosNoRepositorio == quantidadeElementos);
+            Assert.AreEqual(quantidadeLIvrosNoRepositorio, quantidadeElementos);
+        }
+
     }
 }
