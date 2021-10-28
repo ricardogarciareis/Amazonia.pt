@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Amazonia.DAL;
 using Amazonia.DAL.Entidades;
+using Amazonia.DAL.Infraestrutura;
 
 namespace Amazonia.DAL.Repositorios
 {
@@ -70,7 +71,11 @@ namespace Amazonia.DAL.Repositorios
 
         public void Apagar(Livro obj)
         {
-            ListaLivros.Remove(obj);
+            if(ListaLivros.Remove(obj) == false)
+            {
+                throw new AmazoniaException("Falha ao apagar Livro"); 
+            }
+                //ListaLivros.Remove(obj);
         }
 
     }

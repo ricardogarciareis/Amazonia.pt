@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DALTests\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Amazonia.DAL\Amazonia.DAL.csproj" />
   </ItemGroup>
 
