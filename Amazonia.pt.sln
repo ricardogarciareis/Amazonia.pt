@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazonia.WebAPP", "Amazonia
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazonia.ConsoleAPP", "Amazonia.ConsoleAPP\Amazonia.ConsoleAPP.csproj", "{891C0493-6314-4BEC-83AC-1E37AE5CE117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazonia.BLL.Tests", "Amazonia.BLL.Tests\Amazonia.BLL.Tests.csproj", "{62894630-4EE2-4E3D-8B4F-6034B1117378}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazonia.BLL.Tests", "Amazonia.BLL.Tests\Amazonia.BLL.Tests.csproj", "{62894630-4EE2-4E3D-8B4F-6034B1117378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazonia.DAL.Tests", "Amazonia.DAL.Tests\Amazonia.DAL.Tests.csproj", "{4E9E027D-3FF3-43DF-B52B-0B43C9003339}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +99,18 @@ Global
 		{62894630-4EE2-4E3D-8B4F-6034B1117378}.Release|x64.Build.0 = Release|Any CPU
 		{62894630-4EE2-4E3D-8B4F-6034B1117378}.Release|x86.ActiveCfg = Release|Any CPU
 		{62894630-4EE2-4E3D-8B4F-6034B1117378}.Release|x86.Build.0 = Release|Any CPU
+		{4E9E027D-3FF3-43DF-B52B-0B43C9003339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E9E027D-3FF3-43DF-B52B-0B43C9003339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E9E027D-3FF3-43DF-B52B-0B43C9003339}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4E9E027D-3FF3-43DF-B52B-0B43C9003339}.Debug|x64.Build.0 = Debug|Any CPU
+		{4E9E027D-3FF3-43DF-B52B-0B43C9003339}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4E9E027D-3FF3-43DF-B52B-0B43C9003339}.Debug|x86.Build.0 = Debug|Any CPU
+		{4E9E027D-3FF3-43DF-B52B-0B43C9003339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E9E027D-3FF3-43DF-B52B-0B43C9003339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E9E027D-3FF3-43DF-B52B-0B43C9003339}.Release|x64.ActiveCfg = Release|Any CPU
+		{4E9E027D-3FF3-43DF-B52B-0B43C9003339}.Release|x64.Build.0 = Release|Any CPU
+		{4E9E027D-3FF3-43DF-B52B-0B43C9003339}.Release|x86.ActiveCfg = Release|Any CPU
+		{4E9E027D-3FF3-43DF-B52B-0B43C9003339}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
