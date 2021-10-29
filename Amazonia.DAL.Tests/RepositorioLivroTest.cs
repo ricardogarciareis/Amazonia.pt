@@ -4,6 +4,7 @@ using Amazonia.DAL.Repositorios;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Amazonia.DAL.Tests
@@ -93,7 +94,8 @@ namespace Amazonia.DAL.Tests
             //Arrange
             var repo = new RepositorioLivro();
             var livros = repo.ObterTodos();
-            LivroDigital livroInexistente = new LivroDigital();
+            //LivroDigital livroInexistente = new LivroDigital();
+            var livroInexistente = new LivroDigital();
 
             //Act
             var livrosInicialmente = livros.Count;
@@ -103,6 +105,35 @@ namespace Amazonia.DAL.Tests
             //Assert
             Assert.IsTrue(livrosInicialmente > livrosDepoisDeApagar);
         }
+
+        //TDD
+        //Test
+        //Driven
+        //Development
+        //https://pt.wikipedia.org/wiki/Test-driven_development
+
+
+        /*
+        [TestMethod]
+        public void MyTestMethodCreation()
+        {
+            var path = @"c:\temp_local\";
+            if (Directory.Exists(path) == false)
+            {
+                Directory.CreateDirectory(path);
+            }
+        }
+
+        [TestMethod]
+        public void MyTestMethodDestruction()
+        {
+            var path = @"c:\temp_local\";
+            if (Directory.Exists(path))
+            {
+                Directory.Delete(path);
+            }
+        }
+        */
 
     }
 }
