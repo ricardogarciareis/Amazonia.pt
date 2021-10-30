@@ -23,7 +23,7 @@ namespace Amazonia.DAL.Entidades.Tests
 
             //Assert
             Assert.IsTrue(nifInvalido);
-            //Assert.Fail();
+            //Assert.Fail()
         }
 
         [TestMethod()]
@@ -38,7 +38,7 @@ namespace Amazonia.DAL.Entidades.Tests
 
             //Assert
             Assert.IsTrue(nifValido);
-            //Assert.Fail();
+            //Assert.Fail()
         }
 
         [TestMethod()]
@@ -53,7 +53,7 @@ namespace Amazonia.DAL.Entidades.Tests
 
             //Assert
             Assert.IsTrue(nifInvalido);
-            //Assert.Fail();
+            //Assert.Fail()
         }
 
         [TestMethod()]
@@ -68,7 +68,7 @@ namespace Amazonia.DAL.Entidades.Tests
 
             //Assert
             Assert.IsTrue(nifInvalido);
-            //Assert.Fail();
+            //Assert.Fail()
         }
 
         [TestMethod()]
@@ -83,7 +83,7 @@ namespace Amazonia.DAL.Entidades.Tests
 
             //Assert
             Assert.IsTrue(nifInvalido);
-            //Assert.Fail();
+            //Assert.Fail()
         }
 
 

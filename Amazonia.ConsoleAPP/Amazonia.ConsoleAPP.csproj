@@ -1,6 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <!--Adicionado através da linha de comando dotnet add reference ..\Amazonia.DAL-->
     <ProjectReference Include="..\Amazonia.DAL\Amazonia.DAL.csproj" />
   </ItemGroup>

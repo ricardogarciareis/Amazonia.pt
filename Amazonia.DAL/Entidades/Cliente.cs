@@ -10,7 +10,7 @@ namespace Amazonia.DAL.Entidades
     {
         //public Cliente()
         //{
-            //Identificador = Guid.NewGuid();
+            //Identificador = Guid.NewGuid()
         //}
         //public Guid Identificador { get; }
         //public string Nome { get; set; }
@@ -50,11 +50,6 @@ namespace Amazonia.DAL.Entidades
             {
                 return (11 - restoDivisaoPor11) == Convert.ToInt32(NumeroIdentificacaoFiscal[8].ToString());
             }
-
-
-
-
-
             //return false; inicial
             return true;
         }
