@@ -11,7 +11,7 @@ namespace Amazonia.DAL.Entidades
     {
         //public string Nome { get; set; }
         //public string TipoPublicacao { get; set; }
-        public decimal Preco { get; set; }
+        public decimal Preco { protected get; set; }
         public string Descricao { get; set; }
         public string Autor { get; set; }
 
@@ -29,5 +29,6 @@ namespace Amazonia.DAL.Entidades
             sb.Append("| Identificador: " + Identificador);
             return sb.ToString();
         }
+
     }
 }

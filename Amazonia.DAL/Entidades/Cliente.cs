@@ -50,9 +50,16 @@ namespace Amazonia.DAL.Entidades
             {
                 return (11 - restoDivisaoPor11) == Convert.ToInt32(NumeroIdentificacaoFiscal[8].ToString());
             }
-            //return false; inicial
-            return true;
+            //return false inicial
+            //return true
+            this.ToString();
         }
+
+        /// <summary>
+        /// Exibe os dados do cliente
+        /// </summary>
+        /// <returns></returns>
+
         // *Create Unit Tests:
         // Framework p/ Testes: MSTestv2
         //   Projeto de Testes: Amazonia.DAL.Tests

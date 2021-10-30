@@ -2,6 +2,7 @@
 using System.Configuration;
 using Amazonia.DAL;
 using Amazonia.DAL.Repositorios;
+using Amazonia.DAL.Utils;
 
 namespace Amazonia.ConsoleAPP
 {
@@ -9,8 +10,8 @@ namespace Amazonia.ConsoleAPP
     {
         static void Main(string[] args)
         {
-            //ListarClientes();
-            //ListarLivros();
+            var chaveExemplo = ConfigurationManager.AppSettings["chaveExemplo"];
+            var valorObtidoPeloMetodo = Exemplo.ObterValorDoConfig("chaveExemplo");
 
             var usarRegranovaStr = ConfigurationManager.AppSettings["regraNovaAtiva"];
             var usarRegraNova = Convert.ToBoolean(usarRegranovaStr);
