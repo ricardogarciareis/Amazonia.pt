@@ -7,16 +7,12 @@ using System.Threading.Tasks;
 namespace Amazonia.DAL.Entidades
 {
     public abstract class Livro : Entidade
-    //public class Livro : Entidade
     {
-        //public string Nome { get; set; }
-        //public string TipoPublicacao { get; set; }
         public decimal Preco { protected get; set; }
         public string Descricao { get; set; }
         public string Autor { get; set; }
 
-        //public string Idioma { get; set; } //Só em português, espanhol, inglês
-        public Idioma Idioma { get; set; }
+        public Idioma Idioma { get; set; } //Só em português, espanhol, inglês
 
         public virtual decimal ObterPreco(){
             return Preco;

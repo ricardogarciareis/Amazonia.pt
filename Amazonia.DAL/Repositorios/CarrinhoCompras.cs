@@ -22,19 +22,6 @@ namespace Amazonia.DAL.Repositorios
 
         public decimal CalcularPreco()
         {
-
-
-            #region Explicação de chegar ao Linq.Sum
-            //var valorCalculado = 0M;
-            ////Opção 1
-            //foreach(var item in livros)
-            //{
-            //    valorCalculado += item.ObterPreco();
-            //}
-            //throw new NotImplementedException();
-            #endregion
-
-            //opção 2
             var valorCalculado = Livros.Sum(x => x.ObterPreco());
 
             return valorCalculado;

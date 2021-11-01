@@ -16,7 +16,6 @@ namespace Amazonia.DAL.Tests
         public void DeveCriarUmObjetoDoTipoRepositorioLivros()
         {
             //Arrange
-            //var repositorio = new RepositorioLivro()
             RepositorioLivro repositorio;
 
             //Act
@@ -111,29 +110,6 @@ namespace Amazonia.DAL.Tests
         //Driven
         //Development
         //https://pt.wikipedia.org/wiki/Test-driven_development
-
-
-        /*
-        [TestMethod]
-        public void MyTestMethodCreation()
-        {
-            var path = @"c:\temp_local\"
-            if (Directory.Exists(path) == false)
-            {
-                Directory.CreateDirectory(path)
-            }
-        }
-
-        [TestMethod]
-        public void MyTestMethodDestruction()
-        {
-            var path = @"c:\temp_local\"
-            if (Directory.Exists(path))
-            {
-                Directory.Delete(path)
-            }
-        }
-        */
 
     }
 }

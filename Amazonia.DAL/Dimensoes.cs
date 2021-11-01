@@ -17,10 +17,5 @@ namespace Amazonia.DAL
         //Propriedade
         public float Volume => Largura * Altura * Profundidade;
 
-        //Método que faz o mesmo
-        //public float ObterVolume(){
-        //    return Largura * Altura * Profundidade;
-        //}
-
     }
 }

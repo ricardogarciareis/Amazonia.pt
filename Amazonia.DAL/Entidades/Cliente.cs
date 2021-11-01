@@ -8,12 +8,6 @@ namespace Amazonia.DAL.Entidades
 {
     public class Cliente : Entidade
     {
-        //public Cliente()
-        //{
-            //Identificador = Guid.NewGuid()
-        //}
-        //public Guid Identificador { get; }
-        //public string Nome { get; set; }
         public Morada Morada { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
@@ -50,9 +44,7 @@ namespace Amazonia.DAL.Entidades
             {
                 return (11 - restoDivisaoPor11) == Convert.ToInt32(NumeroIdentificacaoFiscal[8].ToString());
             }
-            //return false inicial
-            //return true
-            this.ToString();
+            //this.ToString()
         }
 
         /// <summary>

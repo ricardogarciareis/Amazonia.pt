@@ -45,47 +45,6 @@ namespace Amazonia.DAL.Repositorios
             return ListaClientes;
         }
 
-        // public List<Cliente> ObterTodosQueComecemPor(string comeco)
-        // {
-        //     Console.WriteLine("ObterTodosQueComecemPor");
-        //     var resultado = ListaClientes
-        //                     .Where(x => x.Nome.StartsWith(comeco))
-        //                     .ToList();
-        //     return resultado;
-        // }
-
-        // public List<Cliente> ObterTodosQueTenhamPeloMenos18Anos()
-        // {
-            
-        //     Console.WriteLine("ObterTodosQueTenhamPeloMenos18Anos");
-        //     var resultado = ListaClientes
-        //                     .Where(x => x.Idade >= 18)
-        //                     .ToList();
-        //     return resultado;
-        // }
-
-        // public List<Cliente> ObterTodosQueTenhamPeloMenos18AnosENomeComecePor(string comeco)
-        // {
-        //     Console.WriteLine("ObterTodosQueTenhamPeloMenos18AnosENomeComecePor");
-        //     var resultado = ListaClientes
-        //                     .Where(x => x.Idade >= 18 && x.Nome.StartsWith(comeco))
-        //                     //.Where(x => x.Nome.StartsWith(comeco))
-        //                     .ToList();
-        //     return resultado;
-        // }
-
-        // public List<string> ObterNomeDeTodosQueTenhamPeloMenos18AnosENomeComecePor(string comeco)
-        // {
-        //     Console.WriteLine("ObterNomeDeTodosQueTenhamPeloMenos18AnosENomeComecePor");
-        //     var resultado = ListaClientes //Conjunto de Pesquisa
-        //                     .Where(x => x.Idade >= 18 && x.Nome.StartsWith(comeco)) // Filtro
-        //                     .Select(x => x.Nome.ToUpper())  //Saída
-        //                     .ToList();
-        //     return resultado;
-        // }
-
-
-
         public Cliente Atualizar(string nomeAntigo, string nomeNovo)
         {
             var clienteTemporario = ObterPorNome(nomeAntigo);
@@ -100,7 +59,6 @@ namespace Amazonia.DAL.Repositorios
 
         public void GerarRelatorio(IImpressora impressora)  //TODO: COmpletar a implementação do método Imprimir
         {
-            //IImpressora impressora = new ImpressoraPapel();
             impressora.Imprimir();
         }
     }
