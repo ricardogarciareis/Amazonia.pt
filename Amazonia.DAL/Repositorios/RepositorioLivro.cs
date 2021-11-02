@@ -42,7 +42,14 @@ namespace Amazonia.DAL.Repositorios
                 FormatoFicheiro = "pdf"
             };
             ListaLivros.Add(lotrEBook);
-                
+
+            var lotrPeriod = new LivroPeriodico
+            {
+                Nome = "Jornal O Dia",
+                Autor = "Jornalista José Peixoto",
+                DataLancamento = Convert.ToDateTime("2021-10-01")
+            };
+            ListaLivros.Add(lotrPeriod);    
         }
         public void Criar(Livro obj)
         {

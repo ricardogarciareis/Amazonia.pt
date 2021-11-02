@@ -10,8 +10,8 @@ namespace Amazonia.ConsoleAPP
     {
         static void Main(string[] args)
         {
-            var chaveExemplo = ConfigurationManager.AppSettings["chaveExemplo"];
-            var valorObtidoPeloMetodo = Exemplo.ObterValorDoConfig("chaveExemplo");
+            //var chaveExemplo = ConfigurationManager.AppSettings["chaveExemplo"];
+            //var valorObtidoPeloMetodo = Exemplo.ObterValorDoConfig("chaveExemplo");
 
             var usarRegranovaStr = ConfigurationManager.AppSettings["regraNovaAtiva"];
             var usarRegraNova = Convert.ToBoolean(usarRegranovaStr);
