@@ -1,5 +1,4 @@
-using System.Collections.Generic;
-using Amazonia.DAL.Entidades;
+using Amazonia.DAL.Desconto;
 
 namespace Amazonia.DAL.Repositorios
 {
@@ -7,6 +6,15 @@ namespace Amazonia.DAL.Repositorios
     {
         decimal CalcularPreco();
 
-        decimal AplicarDesconto(decimal valorDesconto);  //TODO: Criar regra Desconto
+        #region AplicarDesconto
+        //Comentado só para guardar histórico
+        //Este método aplicava desconto de igual forma ao carrinho de compras (ver CarrinhoCompras.cs)
+        //decimal AplicarDesconto(decimal valorDesconto);  
+
+        //INJEÇÃO DE DEPENDÊNCIA
+        decimal AplicarDesconto(IDesconto tipoDeDesconto);  //São criadas regras específicas para o objeto (ver CarrinhoCompras.cs)
+        #endregion
     }
 }
+
+

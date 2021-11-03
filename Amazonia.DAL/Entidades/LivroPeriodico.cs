@@ -1,35 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Amazonia.DAL.Repositorios;
-using Amazonia.DAL.Utils;
 
 namespace Amazonia.DAL.Entidades
 {
-    public class LivroPeriodico : Livro
+    // 02/11/2021
+    public class LivroPeriodico : Livro   //31:40 02.11.2021 f1
     {
-        
         public DateTime DataLancamento { get; set; }
-
-        public override decimal ObterPreco()
+        
+        public LivroPeriodico()
         {
-            var dias = Convert.ToInt32(ConfigurationManager.AppSettings["diasLancamento"]);
-            //var dias = Convert.ToInt32(Exemplo.ObterValorDoConfig("diasLancamento"));
-
-            var desconto = Convert.ToInt32(ConfigurationManager.AppSettings["descontoDiasLancamento"]);
-            //var desconto = Convert.ToInt32(Exemplo.ObterValorDoConfig("descontoDiasLancamento"));
-
-            DateTime hoje = DateTime.Now;
-            TimeSpan intervaloTempo = hoje - DataLancamento;
-            int diasAposLancamento = intervaloTempo.Days;
-            //if(diasAposLancamento > 31)
-            if(diasAposLancamento > dias)
+            if(DataLancamento == new DateTime())   //Isto previne situações em que o livro é criado sem data de lançamento
             {
-                //return base.ObterPreco() * 0.5M;
-                return base.ObterPreco() * (desconto/100);
+                DataLancamento = DateTime.Today;
+            }
+        }
+
+        public override decimal ObterPreco()  //O método virtual provém da classe Livro do ficheiro Livro.cs
+        {
+            var ativarDesconto = Convert.ToBoolean(ConfigurationManager.AppSettings["ativarDesconto"]);
+
+            TimeSpan intervaloTempo = DateTime.Today - DataLancamento;
+            int diasAposLancamento = intervaloTempo.Days;
+
+            if (ativarDesconto)
+            {
+                var primeiroPeriodoDesconto = Convert.ToInt32(ConfigurationManager.AppSettings["primeiroPeriodoDesconto"]);
+                var segundoPeriodoDesconto = Convert.ToInt32(ConfigurationManager.AppSettings["segundoPeriodoDesconto"]);
+                var primeiroNivelDesconto = Convert.ToDecimal(ConfigurationManager.AppSettings["primeiroNivelDesconto"]);
+                var segundoNivelDesconto = Convert.ToDecimal(ConfigurationManager.AppSettings["segundoNivelDesconto"]);
+                
+                if (diasAposLancamento < primeiroPeriodoDesconto)
+                {
+                    return base.ObterPreco();
+                }
+                else if(diasAposLancamento >= primeiroPeriodoDesconto && diasAposLancamento < segundoPeriodoDesconto)
+                {
+                    return base.ObterPreco() * (1 - primeiroNivelDesconto / 100);
+                }
+                else
+                {
+                    return base.ObterPreco() * (1 - segundoNivelDesconto / 100);
+                }
             }
             else
             {

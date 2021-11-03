@@ -2,9 +2,7 @@ using Amazonia.DAL.Entidades;
 using Amazonia.DAL.Infraestrutura;
 using Amazonia.DAL.Repositorios;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace Amazonia.DAL.Tests
@@ -83,9 +81,9 @@ namespace Amazonia.DAL.Tests
             Assert.IsTrue(livrosInicialmente > livrosDepoisDeApagar);
         }
 
-#if !DEBUG
-        [Ignore]
-#endif
+        #if !DEBUG
+            [Ignore]
+        #endif
         [TestMethod]
         [ExpectedException(typeof(AmazoniaException))]
         public void DeveGerarExceptionQuandoTentaApagarLivroInexistente()
