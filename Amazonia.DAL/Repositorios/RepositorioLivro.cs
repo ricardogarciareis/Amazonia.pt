@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Amazonia.DAL.Entidades;
 using Amazonia.DAL.Infraestrutura;
+using Amazonia.DAL.Modelo;
 
 namespace Amazonia.DAL.Repositorios
 {
@@ -25,7 +25,7 @@ namespace Amazonia.DAL.Repositorios
             {
                 Nome = "O Senhor dos Anéis",
                 Autor = "J.R.R. Tolkien",
-                DuracaoLivro = 6,
+                DuracaoLivroEmMinutos = 6,
                 FormatoFicheiro = "MP3"
             }; 
             ListaLivros.Add(lotrAud);

@@ -18,5 +18,7 @@ namespace Amazonia.DAL.Modelo
         [Required]
         [MaxLength(255)]
         public string Nome { get; set; }
+
+        public override string ToString() => $"Nome: {Nome} => Identificador: {Id}";
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Amazonia.DAL.Desconto;
-using Amazonia.DAL.Entidades;
+using Amazonia.DAL.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,9 +14,10 @@ namespace Amazonia.DAL.Repositorios
 
         public decimal CalcularPreco()
         {
-            var valorCalculado = Livros.Sum(x => x.ObterPreco());
-
-            return valorCalculado;
+            //var valorCalculado = Livros.Sum(x => x.ObterPreco());
+            //ver o github do jonatas
+            //return valorCalculado;
+            throw new KeyNotFoundException("Falta mover para o local correto");
         }
 
         #region AplicarDesconto
@@ -32,13 +34,15 @@ namespace Amazonia.DAL.Repositorios
         //Implementado a partir da interface ICarrinhoCompras:
         public decimal AplicarDesconto(IDesconto tipoDeDesconto)  //Aplicar desconto através da injeção da interface (INJEÇÃO DE DEPENDÊNCIA)
         {
-            var valorCalculado = Livros.Sum(x => x.ObterPreco());            //Trouxe o somatório dos valores totais dos livros com descontos particulares
-            var valorComDesconto = tipoDeDesconto.Aplicar(valorCalculado);
+            //var valorCalculado = Livros.Sum(x => x.ObterPreco());            //Trouxe o somatório dos valores totais dos livros com descontos particulares
+            //var valorComDesconto = tipoDeDesconto.Aplicar(valorCalculado);
             //Foi possível aceder aos métodos definidos na interface IDesconto e implementados nas
             //classes derivadas (DescontoPercentual e DescontoCombinado)
             //Se o tipoDeDesconto passado for DescontoPercentual então utiliza o método da classe DescontoPercentual.cs
             //Se o tipoDeDesconto passado for DescontoCombinado  então utiliza o método da classe DescontoCombinado.cs
-            return valorComDesconto;
+            //return valorComDesconto;
+
+            throw new NotImplementedException("Falta mover para o local correto");
         }
         #endregion
 

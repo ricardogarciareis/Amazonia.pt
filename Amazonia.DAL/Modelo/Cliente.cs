@@ -18,6 +18,7 @@ namespace Amazonia.DAL.Modelo
         public string UserName { get; set; }
 
         [Required]
+        [MinLength(32), MaxLength(32)]
         public string Password { get; set; }
 
         [Required]

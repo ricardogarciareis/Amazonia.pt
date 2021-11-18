@@ -4,4 +4,13 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Entidades\AudioLivro.cs" />
+    <Compile Remove="Entidades\Entidade.cs" />
+    <Compile Remove="Entidades\Livro.cs" />
+    <Compile Remove="Entidades\LivroDigital.cs" />
+    <Compile Remove="Entidades\LivroImpresso.cs" />
+    <Compile Remove="Entidades\LivroPeriodico.cs" />
+  </ItemGroup>
+
 </Project>
