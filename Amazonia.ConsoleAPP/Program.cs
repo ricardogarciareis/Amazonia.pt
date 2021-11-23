@@ -76,7 +76,70 @@ namespace Amazonia.ConsoleAPP
             //DadosEspecificosDeClientes(ctx);
             //SQLRaw(ctx);
             //ProjecaoComJuncao(ctx);
+            //LazyLoad(ctx);
 
+            ProjecaoDadosEspecificos(ctx);
+
+            //throw new NotImplementedException();
+        }
+
+
+        private static void ProjecaoDadosEspecificos(AmazoniaContexto ctx)
+        {
+            //COUNT
+            var contagemGeral = ctx.Livros.Count();
+            //-------------------------------------------------------------------------------------------
+            //AGRUPAMENTO
+            var contagemAgrupadoPorNome = ctx.Livros.AsEnumerable().GroupBy(x => x.Nome)
+                .Select(ex =>
+                new
+                {
+                    NomeLivro = ex.FirstOrDefault().Nome,
+                    Contagem = ex.Count()
+                });
+            foreach (var item in contagemAgrupadoPorNome)
+            {
+                Console.WriteLine($"Nome: {item.NomeLivro} - Contagem: {item.Contagem}");
+            }
+            //------------------------------------
+            var contagemAgrupadoPorNomeEAutor = ctx.Livros.AsEnumerable().GroupBy(x => 
+                new
+                {
+                    x.Nome,
+                    x.Autor
+                })
+                    .Select(ex =>
+                    new
+                    {
+                        NomeLivro = ex.FirstOrDefault().Nome,
+                        NomeAutor = ex.FirstOrDefault().Autor,
+                        Contagem = ex.Count()
+                    });
+            //-------------------------------------------------------------------------------------------
+            //SUM
+            var somatorioVolumeLivros = ctx.LivrosImpressos.AsEnumerable().GroupBy(x => x.Nome)
+                .Select(ex =>
+                new
+                {
+                    NomeLivro = ex.FirstOrDefault().Nome,
+                    Somatorio = ex.Sum(x => x.Volume)
+                });
+            //-------------------------------------------------------------------------------------------
+            //AVERAGE , MAX E MIN
+            var mediaVolumeLivros = ctx.LivrosImpressos.AsEnumerable().GroupBy(x => x.Nome)
+                .Select(ex =>
+                new
+                {
+                    NomeLivro = ex.FirstOrDefault().Nome,
+                    Somatorio = ex.Average(x => x.Volume),
+                    LivroMaiorVolume = ex.Max(x => x.Volume),
+                    LivroMaisLeve = ex.Min(x => x.Peso)
+                });
+            //-------------------------------------------------------------------------------------------
+        }
+
+        private static void LazyLoad(AmazoniaContexto ctx)
+        {
             var clientesMoramPorto = ctx.Clientes.Where(x => x.Morada.Localidade == "Porto").ToList();
             //LazyLoad
             var clientesMoramPortoComOutrasMoradas = ctx.Clientes.Include("Morada").Where(x => x.Morada.Localidade == "Porto").ToList();
@@ -87,10 +150,6 @@ namespace Amazonia.ConsoleAPP
                 Console.WriteLine("Endereço: " + i.Morada.Endereco);
                 Console.WriteLine("--------------------------------------------");
             }
-
-
-
-            //throw new NotImplementedException();
         }
 
         private static void SQLRaw(AmazoniaContexto ctx)

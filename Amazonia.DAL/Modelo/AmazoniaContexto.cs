@@ -11,6 +11,7 @@ namespace Amazonia.DAL.Modelo
         public DbSet<LivroDigital> LivrosDigitais { get; set; }
         public DbSet<LivroImpresso> LivrosImpressos { get; set; }
         public DbSet<LivroPeriodico> LivrosPeriodicos { get; set; }
+        public DbSet<Venda> Venda { get; set; }
 
 
         //protected override void OnConfiguring(DbContextOptionsBuilder options)
