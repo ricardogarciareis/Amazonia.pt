@@ -1,0 +1,66 @@
+﻿body {
+}
+
+h1:hover, .classeEspecifica {   /*nada é um AND e a vírgula é um OU*/
+    color: red !important;
+    background-color: magenta;
+    border: 1px solid red;
+}
+
+.classeEspecifica {
+    font: bold 18px sophia, verdana;
+    text-shadow: 2px 2px gray;
+    color: brown;
+}
+
+#paragrafoEspecifico {
+    color: green;
+    font-size: x-large;
+}
+
+#paragrafoNormal {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Arial;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    /*text-decoration: dotted;*/
+    text-align: center;
+    
+}
+
+div.NovaClasseDiv {
+    height: 100px;
+    width: 400px;
+    color: darkslategray;
+    font-size: 60px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    background-image: url("../img/teste.jpg");
+    border-style: groove;
+    padding: 100px 50px;
+    margin: 50px;
+}
+
+div.A1 {
+    z-index: 0;
+    background-color: aquamarine;
+}
+
+div.A2 {
+    z-index: 1;
+    background-color: cadetblue;
+    left: 20px;
+}
+
+div.A3 {
+    z-index: 2;
+    background-color: royalblue;
+    left: 20px;
+}
+
+div.A4 {
+    z-index: 3;
+    background-color: slateblue;
+    left: 20px;
+}

@@ -99,7 +99,7 @@ namespace Amazonia.DAL.Repositorios.Tests
             //});
             //var clienteFake = new Cliente();
             var carrinho = new CarrinhoCompras();
-            var valorEsperado = 10M;
+            //var valorEsperado = 10M;
 
             //Act
             //carrinho.Cliente = clienteFake;
@@ -200,7 +200,7 @@ namespace Amazonia.DAL.Repositorios.Tests
             //};
             //var carrinho = new CarrinhoCompras();
             //carrinho.Livros = livrosFake;
-            var valorEsperado = 80M;
+            //var valorEsperado = 80M;
             
             var desconto = new DescontoPercentual()   //Proveniente da Injeção de Dependência (var = IDesconto)
             {
@@ -224,8 +224,8 @@ namespace Amazonia.DAL.Repositorios.Tests
             //};
             //var carrinho = new CarrinhoCompras();
             //carrinho.Livros = livrosFake;
-            var valorEsperadoPercentual = 80M;
-            var valorEsperadoCombinado = 100M;
+            //var valorEsperadoPercentual = 80M;
+            //var valorEsperadoCombinado = 100M;
 
             var descontoPercentual = new DescontoPercentual
             {
